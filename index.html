@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>herbody</title>
+    <title>fetus</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
@@ -23,14 +23,14 @@
 
 <!--	  Remember to change 3jsTemplate to your folder name!-->
 	  
-  <script src="../sarahnicita/static/js/three.js"></script>
-	  <script src="../sarahnicita/static/js/loaders/DDSLoader.js"></script>
-		<script src="../sarahnicita/static/js/loaders/MTLLoader.js"></script>
-		<script src="../sarahnicita/static/js/loaders/OBJMTLLoader.js"></script>
+  <script src="../fetus/static/js/three.js"></script>
+	  <script src="../fetus/static/js/loaders/DDSLoader.js"></script>
+		<script src="../fetus/static/js/loaders/MTLLoader.js"></script>
+		<script src="../fetus/static/js/loaders/OBJMTLLoader.js"></script>
 	
-  <script src="../sarahnicita/static/js/StereoEffect.js"></script>
-  <script src="../sarahnicita/static/js/DeviceOrientationControls.js"></script>
-  <script src="../sarahnicita/static/js/OrbitControls.js"></script>
+  <script src="../fetus/static/js/StereoEffect.js"></script>
+  <script src="../fetus/static/js/DeviceOrientationControls.js"></script>
+  <script src="../fetus/static/js/OrbitControls.js"></script>
 
   <script>
     var camera, scene, renderer, model;
@@ -98,7 +98,7 @@
     
       //the sky
       material = new THREE.MeshBasicMaterial({
-          map: THREE.ImageUtils.loadTexture("../sarahnicita/This.jpg"),
+          map: THREE.ImageUtils.loadTexture("../fetus/fetus.jpg"),
           side: THREE.DoubleSide
       });
       sky = new THREE.Mesh(new THREE.SphereGeometry(500, 60, 40 ), material);
@@ -122,17 +122,17 @@
 		THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
     
 			var loader = new THREE.OBJMTLLoader();
-				loader.load( '../sarahnicita/model/mesh copy.obj', '../sarahnicita/model/mesh copy.mtl', function ( object ) {
+				loader.load( '../fetus/model/Model.obj', '../fetus/model/Modek.mtl', function ( object ) {
 					model = object;
 					//Use these to set the object's position
-					//object.position.y = 5;
-					//object.position.x = 5;
-					//object.position.z = 5;
+					//object.position.y = 0;
+					//object.position.x = 0;
+					//object.position.z = 0;
 					
 					//Use these to change the object's scale
-					//object.scale.y = 4;
-					//object.scale.x = 4;
-					//object.scale.z = 4;
+					//object.scale.y = 5;
+					//object.scale.x = 5;
+					//object.scale.z = 5;
 					
 					scene.add( model );
 
@@ -176,7 +176,7 @@
 		//Use this to control rotation
  if (model) 
     { 
-				model.rotation.y += 0.004;
+				model.rotation.y += 0.001;
 	}
 
 				
